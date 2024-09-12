@@ -1,0 +1,33 @@
+"hello"
+echo hi | wc -l &
+echo hi > new.txt & | wc
+
+sleep 2
+sleep 2
+sleep 1
+sleep 1
+sleep 1.5
+sleep 1.5
+sleep 1
+sleep 1
+sleep 2
+iMan sleep
+iMan fork
+hop prompts
+iMan fork
+iMan sleep
+reveal
+sleep 5
+sleep 15
+iMan sleep
+neonate -n 1
+hop .. | wc
+neonate -n 1
+echo "ko" | hop
+echo "hi" & | cat new.txt
+sleep 20
+activities
+bg 2859
+neonate -n 1
+neonate -n 2
+neonate -n 4
