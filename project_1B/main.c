@@ -64,22 +64,13 @@ int main()
                 // exit(0);
             }
         }
-        // if(fgets(buffer2, sizeof(buffer2), stdin) == NULL)
-        // {
-        //     perror("fgets() error");
-        //     return 0;
-        // }
-       // check_background_processes();
         trim(buffer2);
         int file;
         char buffer3[10000];
         extract_last_line(filepath, buffer3, 10000);
         fflush(stdout);
-      //  trim(buffer3);
-        // buffer2[strlen(buffer2)] = '\n';
         char x[] = "log\n";
 file = open(filepath, O_RDWR | O_CREAT | O_APPEND, 0644);
-// printf("buffer2 is %s and buffer3 is %s %d %d", buffer2,buffer3,strlen(buffer2),strlen(buffer3));
 if (file < 0) {
     perror("Error opening file");
     return 0;

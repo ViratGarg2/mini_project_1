@@ -25,7 +25,7 @@ void trim2(char *str)
  //   printf("memov is %s\n",str);
 }
 char* redirecting_input_output(char * command2,int saved_stdout,int saved_stdin){
-   // printf("hi");
+   // printf("hi\n");
    char *input_file = NULL;
         char *output_file = NULL;
         int append_mode = 0;
@@ -65,38 +65,32 @@ char* redirecting_input_output(char * command2,int saved_stdout,int saved_stdin)
       //  printf("command 3 is %s",command2);
         if (input_file) {
             input_file = strtok(input_file,"&");
-            // printf("input file is %s",input_file);
             input_file = strtok(input_file, ">");
             trim2(input_file);
-            // printf("input file is %s\n",input_file);
             int input_fd = open(input_file, O_RDONLY | O_EXCL);
             if (input_fd == -1) {
-                fprintf(stderr, "No such input file found!\n");
-                // Restore original file descriptors
+                printf("%sNo such input file found!\n%s",red,reset);
                 dup2(saved_stdout, STDOUT_FILENO);
                 dup2(saved_stdin, STDIN_FILENO);
                 close(saved_stdout);
                 close(saved_stdin);
-                return NULL;
+               return NULL;
             }
             dup2(input_fd, STDIN_FILENO);
             close(input_fd);
         }
 
-        // Handle output redirection
         if (output_file) {
             output_file = strtok(output_file,"&");
             trim2(output_file);
-            // printf("output file is %s\n great",output_file);
             int output_fd;
             if (append_mode) {
-                output_fd = open(output_file, O_WRONLY | O_APPEND, 0644);
+                output_fd = open(output_file, O_WRONLY | O_APPEND | O_CREAT, 0644);
             } else {
-                output_fd = open(output_file, O_WRONLY | O_TRUNC, 0644);
+                output_fd = open(output_file, O_WRONLY | O_TRUNC | O_CREAT, 0644);
             }
             if (output_fd == -1) {
                 fprintf(stderr, "Error opening output file: %s\n", strerror(errno));
-                // Restore original file descriptors
                 dup2(saved_stdout, STDOUT_FILENO);
                 dup2(saved_stdin, STDIN_FILENO);
                 close(saved_stdout);

@@ -25,4 +25,5 @@ void delete_process(int pid);
 void send_signal_to_pid(int pid, int signal);
 void ctrl_d();
 void ctrl_z(int sig);
+bool check(int pid);
 #endif

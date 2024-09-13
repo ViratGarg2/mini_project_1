@@ -35,7 +35,7 @@ void print_status2(){
             printf("%d: %s Running\n",back[i].pid,back[i].name);
         }
         if(back[i].status == 0){
-            printf("%d: %s Stopped\n %d",back[i].pid,back[i].name,back[i].status);
+            printf("%d: %s Stopped\n",back[i].pid,back[i].name);
         }
     }
 }
@@ -148,7 +148,18 @@ void ctrl_z(int sig){
     time2 = 1;
     foreground_id = -1;
     tcsetpgrp(STDIN_FILENO,getpid());
-    printf("%d\n",foreground_id);
+   // printf("%d\n",foreground_id);
     check_status();
-    printf("%s\nCtxxwrl+Z detected\n%s",red,reset);
+    printf("%s\nCtrl+Z detected\n%s",red,reset);
+}
+
+bool check(int pid){
+    for(int i = 0;i<process_count2;i++){
+        if(back[i].pid == pid){
+          //  printf("found\n");
+            fflush(stdout);
+            return true;
+        }
+    }
+    return false;
 }

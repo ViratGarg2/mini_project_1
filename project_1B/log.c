@@ -59,7 +59,7 @@ void print_log(int file) {
         if (lines_count <= 15) {
             lseek(file, 0, SEEK_SET);
         } else {
-            lseek(file, pos + 2, SEEK_SET);  // +2 to skip the last newline and character
+            lseek(file, pos + 2, SEEK_SET);  
         }
         char buffer[BUFFER_SIZE];
         ssize_t bytes_read;

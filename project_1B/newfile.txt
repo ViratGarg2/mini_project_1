@@ -1,33 +1,91 @@
-"hello"
-echo hi | wc -l &
-echo hi > new.txt & | wc
-
-sleep 2
-sleep 2
-sleep 1
-sleep 1
-sleep 1.5
-sleep 1.5
-sleep 1
-sleep 1
-sleep 2
-iMan sleep
-iMan fork
-hop prompts
-iMan fork
-iMan sleep
-reveal
-sleep 5
-sleep 15
-iMan sleep
-neonate -n 1
+/home/viratgarg/Documents/Sem3/OSN/projects~
+home
+sleep 5 | sleep 5 &
+sleep 5 | sleep 6 &
+ps 40975
+echo hi | wc > new.txt |wc|wc
+echo hi | wc > new.txt |wc|wc
+echo hi | wc > new.txt |wc|wc
+echo owdbc | wc > new.txt
+echo owdbc | wc > new.txt
+echo "lore" | wc >> new.txt
+echo "lore" | wc >> new.txt
+echo aoihc | wc
+echo "lorem ipsum" | wc
+echo "lorem" | wc >> new.txt
+echo "lorem ipsum" | wc
+echo "lorem" | wc
+echo lorem | wc
+echo "lorem ipsum" | wc
+echo "joi" | wc
+echo "kop" | wc >> new.txt
+echo "kopaoudb" | wc >> new.txt
+echo "sdou" | wc
+echo "lorem \n weoibf" | wc > k.txt
+cat < new.txt | wc
+cat < new.txt > output.txt
+cat < new.txt | wc > output.txt
+hop .. | wdc
 hop .. | wc
-neonate -n 1
-echo "ko" | hop
-echo "hi" & | cat new.txt
-sleep 20
+echo "hi" >> output.txt | wc
+proclore | wc
+reveal | wc
+reveal -l | wc
+reveal | wc
+echo "lorem ipsum" | wc
+echo "lorem ipsum" > new.txt | wc
+echo hi | wc > output.txt
+echo "lorem ipsum" > new.txt | wc
+echo "lorem ipsum" > new.txt | wc
+echo hello | wc
+reveal | wc
+proclore | wc
+reveal | wc
+reveal | wc
+reveal -l | wc > a.txt
+cat a.txt
+reveal -l 		| wc
+reveal -l        |      wc
+reveal -a | wc
+reveal -l | wc
+sleep 5 | sleep 5
+sleep 5 | sleep 5  &
+reveal | wc >> virat.txt
+sleep 5 | sleep 2 &
+reveal | wc >> virat.txt
+echo hello
+reveal | wc >> virat.txt
+echo hello
+reveall | wc
+echo "lorem" | wc
+reveal | wc
+reveal -l | wc
+reveal | wc
+reveal | wc > a.txt | cat < b.txt
+reveal | wc > v.txt
+proclore | wc > v.txt | log | wc
+seek reveal.c | wc
+reveal | wc > a.txt
+reveal -a
+reveal -a | wc
+neonate -n 2 | wc
+reveal | wc | grep a
+reveal grep a
+sleep 2 | wc &
+sleep 2 &
+sleep 100 &
+reveal -l;hop prompts
+home
+reveal -l 	| wc
+reveal -l | wc
+reveal -l | wc
+iMan sleep
+iMan sleep
+iMan | wc
+iMan sleep | wc
+echo ji >> lop.txt
+vi
+activitie
 activities
-bg 2859
-neonate -n 1
-neonate -n 2
-neonate -n 4
+iMan fork
+reveal 	| 	wc

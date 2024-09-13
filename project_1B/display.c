@@ -19,7 +19,6 @@ void display(char*c,char*g){
             printf("%s<%s@home:~%s %s>%s",magenta,g,p+strlen(c),time_command,reset);
             else
             printf("%s<%s@home:~%s>%s",magenta,g,p+strlen(c),reset);
-           
         } else {
             if(time2 == 0)
             printf("%s<%s~%s>%s",blue,p,time_command,reset);

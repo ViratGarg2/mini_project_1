@@ -80,9 +80,7 @@ void execute_pipe(char *command, char *p, char *c, char *g, int k, int flg, char
         token = strtok(NULL, "|");
     }
 
-    // Loop through each command in the pipeline
-    // char * commands2[MAX_CMDS];
-    //  printf("num_cmds is %d",num_cmds);
+
     for (int i = 0; i < num_cmds; i++)
     {
         char command3[4096];
@@ -111,7 +109,6 @@ void execute_pipe(char *command, char *p, char *c, char *g, int k, int flg, char
         // printf("args[0] is %s",args[0]);
         // fflush(stdout);
         //  printf("commands i is %s\n",commands[i]);
-        // If this is not the last command, create a pipe
         if (i < num_cmds - 1)
         {
             if (pipe(pipefd) == -1)
@@ -149,12 +146,6 @@ void execute_pipe(char *command, char *p, char *c, char *g, int k, int flg, char
                 close(input_fd);
             }
 
-            // If not the last command, redirect output to the current pipe
-            // printf("%d",pipefd[0]);
-            //  printf("pipefd are %s",args[0]);
-            // fflush(stdout);
-           // printf("command 3 is %s\n", commands[i]);
-           // fflush(stdout);
             if (i < num_cmds - 1)
             {   
 
@@ -169,16 +160,13 @@ void execute_pipe(char *command, char *p, char *c, char *g, int k, int flg, char
             // fflush(stdout);
             // printf("Hio Kaisa ho? %s", args[0]);
             // fflush(stdout);
-            //  Handle redirection (<, >)
-
-            // redirecting_input_output()
 
             handle_redirection(args);
             trim(args[0]);
             
             int a = 0;
            
-            if (strncmp(args[0], "reveal", 6) == 0 || strncmp(args[0], "log", 3) == 0 || strncmp(args[0], "hop", 3) == 0 || strncmp(args[0], "proclore", 8) == 0 || strncmp(args[0], "seek", 4) == 0 || strncmp(args[0],"activities",11) == 0)
+            if (strncmp(args[0], "reveal", 6) == 0 || strncmp(args[0], "log", 3) == 0 || strncmp(args[0], "hop", 3) == 0 || strncmp(args[0], "proclore", 8) == 0 || strncmp(args[0], "seek", 4) == 0 || strncmp(args[0],"activities",11) == 0 || strncmp(args[0],"iMan",4) == 0 || strncmp(args[0],"fg",2) == 0 || strncmp(args[0],"bg",2) == 0)
             {
 
                 input(0, p, c, g, 0, 0, save, command_final);
@@ -201,30 +189,22 @@ void execute_pipe(char *command, char *p, char *c, char *g, int k, int flg, char
         {   
             FILE *pid_file = fopen(pids, "a");
                     if (pid_file != NULL) {
-                        fprintf(pid_file, "%d %s\n", pid,command_final); // Write the PID to the file
-                        fclose(pid_file);             // Close the file
+                        fprintf(pid_file, "%d %s\n", pid,command_final); 
+                        fclose(pid_file);
                     } else {
                         perror("Unable to open file to store PID");
             }
-            // In the parent process
-            // Close the input file descriptor from the previous command
             if (input_fd != 0)
             {
                 close(input_fd);
             }
-
-            // Close the write end of the pipe
             if (i < num_cmds - 1)
             {
                 close(pipefd[1]);
-                input_fd = pipefd[0]; // Set input for the next command to the read end of the pipe
+                input_fd = pipefd[0];
             }
-
-            // Wait for the child process to finish
             waitpid(pid, NULL, 0);
         }
-
-        // Free dynamically allocated memory
         free(args);
         fflush(stdout);
     }

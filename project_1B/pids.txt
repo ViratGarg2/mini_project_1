@@ -1,72 +1,82 @@
-112998 sleep 10
-114529 sleep 20
-114626 sleep 10
-115264 sleep 20
-123926 vim
-124147 sleep 20
-124420 sleep 20
-124693 sleep 20
-125076 sleep 20
-126426 sleep 20
-128075 emacs new.txt
-128168 vim
-128919 emacs new.txt
-129509 gedit
-129855 gedit
-130066 sleep 3
-130171 gedit
-130279 gedit
-130456 gedit
-132765 reveal -l
-132766 wc
-132789 reveal -l
-132790 wc
-132849 reveal
-132850 wc
-132925 sleep 10
-133258 sleep 10
-133290 sleep 10
-133971 vim
-134627 gedit
-134952 gedit
-135145 gedit
-152147 echo "lol" > new.txt
-153277 echo "lol" > new.txt
-153351 echo "lorem" > new.txt
-176864 echo "lorem ipsum"
-176909 reveal -l
-179568 sleep 30
-179968 sleep 30
-180835 emacs new.txt
-181944 sleep 20
-182297 sleep 10
-182971 sleep 10
-183674 sleep 10
-184193 sleep 10
-184528 sleep 10
-185379 sleep 10
-185676 sleep 20
-185951 sleep 20
-186232 sleep 10
-192823 sleep 10
-193083 sleep 20
-193848 sleep 20
-194704 sleep 20
-194990 sleep 20
-196225 vim
-197095 vim
-197818 sleep 10
-197975 emacs
-199111 sleep 3
-287462 echo hi
-287463 wc
-287540 echo "kl"
-287541 wc
-287704 echo "lorem ipsum"
-287705 wc ipsum"
-287728 echo "kl"
-287729 wc
-20601 hop ..
-20602 wc
-2555 echo "ko"
-2556 hop
+35652 sleep 5
+35700 sleep 5
+35992 sleep 10
+36062 sleep 10
+40765 sleep 5
+40976 sleep 5
+41019 sleep 6
+41284 echo hi
+41285 wc > new.txt
+41432 echo hi
+41433 wc > new.txt
+41580 echo hi
+41581 wc > new.txt
+41626 echo owdbc
+41627 wc > new.txt
+41826 echo "lore"
+41827 wc >> new.txt
+41947 echo "lore"
+42044 echo aoihc
+42127 echo "lorem ipsum"
+42269 echo "lorem"
+42270 wc >> new.txt
+42325 echo "lorem ipsum"
+42696 echo "lorem"
+43092 echo "lorem"
+43211 echo lorem
+47895 echo "lorem"
+47896 wc
+47919 reveal
+47920 wc
+47943 reveal -l
+47944 wc
+47983 reveal
+47984 wc
+48089 reveal
+48090 wc > a.txt
+48091 cat < b.txt
+48129 reveal b.txt
+48130 wc > v.txt
+48269 proclore > v.txt 
+48270 wc > v.txt
+48271 log v.txt
+48272 wc v.txt
+48295 log v.txt
+48296 wc v.txt
+48349 log v.txt
+48350 wc v.txt
+48374 log v.txt
+48375 wc v.txt
+48428 seek reveal.c
+48429 wc
+48527 reveal
+48528 wc > a.txt
+48579 reveal -a
+48580 wc
+48619 neonate -n 2
+48620 wc 2
+48691 reveal  
+48692 wc 
+48693 grep a
+48826 sleep 2
+48853 wc
+2622 reveal -l
+2623 wc
+2787 log
+2788 wc
+2826 reveal -l
+2827 wc
+2850 reveal -l
+2851 wc
+3866 log
+3867 wc
+4553 iMan
+4554 wc
+4577 iMan sleep
+4592 wc
+4992 log
+4993 wc
+5043 log
+5044 wc
+5073 reveal
+5074 wc

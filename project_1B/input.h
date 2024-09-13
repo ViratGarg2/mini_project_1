@@ -27,9 +27,11 @@
 #include "pipes.h"
 #include "man.h"
 #include "background.h"
-#include "ping.h"
 #include "signals.h"
 #include "neonate.h"
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <signal.h>
 void read_file(char* path);
 extern int sleepflg;
 extern int sleepval;

@@ -47,7 +47,6 @@ void search_dir(char *target_dir, const char *base_name, const char *relative_pa
     }
 
     while ((entry = readdir(dir)) != NULL) {
-        // Skip the "." and ".." entries
         if (strcmp(entry->d_name, ".") == 0 || strcmp(entry->d_name, "..") == 0)
             continue;
         snprintf(path, sizeof(path), "%s/%s", target_dir, entry->d_name);

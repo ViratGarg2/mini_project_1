@@ -23,8 +23,8 @@ void selfmade(char *buffer2, char *buffer3, int file, char *p, char *c, char *g,
                 trim(command);
                 //  printf("command is %s\n",command);
                 char* save;
-                input2(command, buffer3, file, p, c, g, k, flg);
-            //  input(0,p,c,g,k,flg,save,command);
+               // input2(command, buffer3, file, p, c, g, k, flg);
+                input(0,p,c,g,k,flg,save,command);
                 fclose(file2);  // Close file before returning
                 return;
 

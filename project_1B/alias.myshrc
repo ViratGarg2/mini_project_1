@@ -3,9 +3,9 @@
 reveall = reveal -l ;echo "lorem ipsum"
 //OR
 // You can create aliases with a predefined keyword say 'alias' as well (Whatever suits you! Note: You aren't expected to handle both ways either way is fine)
-alias reveala = reveal -a;hop prompts
+alias reveala = reveal -a
 alias home = hop ~
-alias reveall = reveal -l;hop prompts
+alias reveall = reveal -l
 alias sleep1 = sleep 2
 //Functions
 mk_hop()

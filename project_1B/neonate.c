@@ -6,7 +6,7 @@ void disableRawMode()
 }
 void enableRawMode()
 {
-    // in normal mode it wait for newline from user to read the input by removing the canonical mode from original now we can read the input without having newline from the user..
+   // raw mode enables it to work without pressing enter key
     tcgetattr(STDIN_FILENO, &orig_termios);
     atexit(disableRawMode);
     struct termios raw = orig_termios;
@@ -25,16 +25,16 @@ void last_pid(int time)
             FILE *file = fopen("/proc/sys/kernel/ns_last_pid", "r");
             if (!file)
             {
-                perror("Error opening /proc/sys/kernel/ns_last_pid");
-                exit(EXIT_FAILURE);
+                perror("Error accessing processes");
+                exit(0);
             }
 
             int last_pid;
             if (fscanf(file, "%d", &last_pid) != 1)
             {
-                perror("Error reading last PID");
+                perror("Error reading PID");
                 fclose(file);
-                exit(EXIT_FAILURE);
+                exit(0);
             }
             fclose(file);
             printf("%d\n", last_pid);

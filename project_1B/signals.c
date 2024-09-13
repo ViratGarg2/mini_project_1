@@ -5,8 +5,8 @@ void handle_sigint(int sig) {
         printf("%sNo foreground process found\n%s",red,reset);
         return;
     }
-    printf("%d\n",foreground_id);
-    kill(foreground_id,SIGINT);
+   // printf("%d\n",foreground_id);
+    kill(foreground_id,SIGKILL);
     printf("\n%sCtrl+C pressed killing the foreground process\n%s",red,reset);
-    printf("%d\n",time2);
+   // printf("%d\n",time2);
 }
