@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Assumptions:
 
 1. log execute is 0 indexed, log execute 0 will run the last running code
@@ -19,3 +20,6 @@ Assumptions:
 
 
 
+=======
+# mini-project-1-template
+>>>>>>> bd6b55145c698366bcc90612d1dbe39927e7c0c9
