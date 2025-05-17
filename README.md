@@ -76,5 +76,4 @@ To compile the shell, use the provided `Makefile`:
 
 ```bash
 gcc *.c
-```bash
 ./a.out
