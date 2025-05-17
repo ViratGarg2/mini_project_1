@@ -75,4 +75,6 @@ The codebase is structured into multiple C files for modularity, each handling s
 To compile the shell, use the provided `Makefile`:
 
 ```bash
-make
+gcc *.c
+```bash
+./a.out
